@@ -24,3 +24,9 @@ jobs:
 
     - name: Run tests
       run: cargo test --verbose
+
+    - name: Install Python & Lizard
+      run: pip install lizard
+
+    - name: Compare with Lizard (CC validation)
+      run: python tests/compare_lizard.py
